@@ -14,5 +14,7 @@ lazy val root = (project in file("."))
     parallelExecution in test := false,
     logLevel := Level.Info,
     showTiming := false,
-    showSuccess := false
+    showSuccess := false,
+    libraryDependencies += "com.lihaoyi" %% "utest" % "0.7.2" % "test",
+    testFrameworks += new TestFramework("utest.runner.Framework")
   )
